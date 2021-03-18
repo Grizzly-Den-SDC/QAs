@@ -1,0 +1,22 @@
+{
+  "name": "qa_backend_primary",
+  "version": "1.0.0",
+  "description": "The backend for the questions and answers of the FE3 frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grizzly-Den-SDC/QAs.git"
+  },
+  "author": "nohren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grizzly-Den-SDC/QAs/issues"
+  },
+  "homepage": "https://github.com/Grizzly-Den-SDC/QAs#readme",
+  "dependencies": {
+    "pg": "^8.5.1"
+  }
+}
