@@ -4,7 +4,9 @@
   "description": "The backend for the questions and answers of the FE3 frontend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "load": "psql -d postgres -f schema.sql",
+    "start": "nodemon ./server/server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,10 @@
   },
   "homepage": "https://github.com/Grizzly-Den-SDC/QAs#readme",
   "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "pg": "^8.5.1"
   }
 }
