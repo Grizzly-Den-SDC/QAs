@@ -29,3 +29,8 @@ results
 
 npm-debug.log
 node_modules
+
+#large files
+data/answers_photos.csv
+data/answers.csv
+data/questions.csv
