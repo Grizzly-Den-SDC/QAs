@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "load": "psql -d postgres -f schema.sql",
-    "start": "nodemon ./server/server.js"
+    "initSchema": "psql -d postgres -f schema.sql",
+    "load": "node ./db/loadDb.js",
+    "start": "nodemon ./server/server.js",
+    "index": "node ./db/indexDb.js"
   },
   "repository": {
     "type": "git",

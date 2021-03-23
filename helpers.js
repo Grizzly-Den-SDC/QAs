@@ -1,9 +1,54 @@
 // the purpose of this file is provide helper functions for this project
 
-// this section is for ensuring the data is clean to that it inserts into the db nicely
-// all data is separated by line and comma   
+//object filter - intake an object of nested objects and construct a new object of nested objects that pass the filter
 
-//
+//IOCE - input is 1 x nested obj, output is 1 x nested obj with obj that pass the filter
+
+var objFilter = (nestedObj) => {
+  // init new obj
+  var obj = {};
+  //consider each obj within the nested obj
+  for (var key in nestedObj) {
+    var answer = nestedObj[key];
+    if (answer.reported === false) {
+      obj[key] = answer;
+    }
+  }
+  //return new obj
+  return obj;
+};
+
+module.exports = {
+  objFilter
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // INSERT INTO questions VALUES (1,1,'What fabric is the top made of?','2018-01-04','yankeelover','first.last@gmail.com',0,1);
 
@@ -30,4 +75,4 @@
   // db constraints for photos
     //photo_id is a unique int
     //answer_id is a that exists in the answers.answers_id field
-    //url is a string 
+    //url is a string

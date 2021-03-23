@@ -18,7 +18,7 @@ DROP TABLE photos;
 -- questions table
 -- id, product_id, body, date_written, asker_name, asker_email, reported, helpful
 CREATE TABLE questions (
-    question_id int PRIMARY KEY UNIQUE,
+    question_id serial PRIMARY KEY UNIQUE,
     product_id int NOT NULL,
     question_body varchar(1000),
     question_date date,
@@ -31,7 +31,7 @@ CREATE TABLE questions (
 -- answers table
 -- id, question_id, body, date_written, answerer_name, answerer_email, reported, helpful
 CREATE TABLE answers (
-    answer_id int PRIMARY KEY UNIQUE,
+    answer_id serial PRIMARY KEY UNIQUE,
     question_id int,
     body varchar(1000),
     date date,
@@ -45,8 +45,9 @@ CREATE TABLE answers (
 -- photos table
 -- id, answer_id, url
 CREATE TABLE photos (
-    photo_id int PRIMARY KEY UNIQUE,
+    photo_id serial PRIMARY KEY UNIQUE,
     answer_id int,
     url varchar,
     FOREIGN KEY (answer_id) REFERENCES answers
 );
+
