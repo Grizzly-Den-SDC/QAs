@@ -34,3 +34,4 @@ node_modules/
 data/answers_photos.csv
 data/answers.csv
 data/questions.csv
+qa.sql
