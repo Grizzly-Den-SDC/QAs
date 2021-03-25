@@ -10,10 +10,17 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, '../loader_io')));
+
+app.get('/test', (req, res) => {
+  console.log('Recieved req', req)
+  res.status(201).send('gotcha,no auth problems in express')
+})
+
 // /qa/questions?product_id=18201&count=50
 app.get('/qa/questions', (req, res) => {
   //how to do pagination as in question count and questions per page?
-  // console.log(req.query)
+  console.log(req.query)
   let { product_id, count } = req.query;
   db.getQuestionsAndAnswers(product_id, count, (err, result) => {
     if (err) {
