@@ -1,12 +1,13 @@
 const path = require('path');
 const { Pool, Client } = require('pg');
-
+const config = require('../config');
 
 const pool = new Pool({
-    user: 'orennelson',
-    host: 'localhost',
-    database: 'qa',
-    port: 5432,
+    user: config.user,
+    host: config.host,
+    password: config.password,
+    database: config.database,
+    port: config.port,
 });
 
 pool.on('error', (err, client) => {
