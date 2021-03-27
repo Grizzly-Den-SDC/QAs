@@ -9,7 +9,7 @@ const PORT = 8080;
 
 //middlewear
 const app = express();
-app.use(compression);
+app.use(compression());
 app.use(express.json());
 app.use(cors());
 
